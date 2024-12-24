@@ -75,7 +75,7 @@ sed -i -r "s/server.backupTTL = ([0-9]+|[a-zA-Z]+)( #)?/server.backupTTL = ${BAC
 
 # cloudflare bypass
 sed -i -r "s/server.flareSolverrEnabled = ([0-9]+|[a-zA-Z]+)( #)?/server.flareSolverrEnabled = ${FLARESOLVERR_ENABLED:-\1} #/" /home/suwayomi/.local/share/Tachidesk/server.conf
-sed -i -r "s|server.flareSolverrUrl = \"(.*?)\"( #)?|server.flareSolverrUrl = \"${FLARESOLVERR_URL:-\1}\" #|" /home/suwayomi/.local/share/Tachidesk/server.conf
+sed -i -r "s|server.flareSolverrUrl = \"(.*?)\"( #)?|server.flareSolverrUrl = \"${FLARESOLVERR_PROTOCOL:-http}://${FLARESOLVERR_URL:-\1}\" #|" /home/suwayomi/.local/share/Tachidesk/server.conf
 sed -i -r "s/server.flareSolverrTimeout = ([0-9]+|[a-zA-Z]+)( #)?/server.flareSolverrTimeout = ${FLARESOLVERR_TIMEOUT:-\1} #/" /home/suwayomi/.local/share/Tachidesk/server.conf
 sed -i -r "s/server.flareSolverrSessionName = \"(.*?)\"( #)?/server.flareSolverrSessionName = \"${FLARESOLVERR_SESSION_NAME:-\1}\" #/" /home/suwayomi/.local/share/Tachidesk/server.conf
 sed -i -r "s/server.flareSolverrSessionTtl = ([0-9]+|[a-zA-Z]+)( #)?/server.flareSolverrSessionTtl = ${FLARESOLVERR_SESSION_TTL:-\1} #/" /home/suwayomi/.local/share/Tachidesk/server.conf

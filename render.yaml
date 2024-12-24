@@ -27,8 +27,7 @@ services:
       - key: BASIC_AUTH_PASSWORD
         sync: false
       - key: EXTENSION_REPOS
-        value:
-          - https://github.com/keiyoushi/extensions/tree/repo
+        value: "https://github.com/keiyoushi/extensions"
       - key: FLARESOLVERR_ENABLED
         value: true
       - key: FLARESOLVERR_PROTOCOL

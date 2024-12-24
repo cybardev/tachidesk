@@ -16,7 +16,7 @@ services:
     region: ohio
     runtime: image
     image:
-      url: ghcr.io/suwayomi/tachidesk:latest
+      url: ghcr.io/cybardev/tachidesk:preview
     envVars:
       - key: BIND_PORT
         value: 443

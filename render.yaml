@@ -2,7 +2,7 @@
 version: "1"
 services:
   # FlareSolverr service
-  - name: flareresolverr
+  - name: flaresolverr
     type: web
     plan: free
     region: ohio
@@ -34,7 +34,7 @@ services:
         value: https
       - key: FLARESOLVERR_URL
         fromService:
-          name: flareresolverr
+          name: flaresolverr
           type: web
           property: hostport
     domains:
